@@ -37,12 +37,12 @@ namespace Metrology3
         int minDigit = 9;
         a = abs(a);
 
-        while (a > 0) {
+        do {
             if (a % 10 < minDigit) {
                 minDigit = a % 10;
             }
             a /= 10;
-        }
+        } while (a < 0);
         return minDigit;
     }
 
